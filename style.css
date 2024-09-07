@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --blacku: #504f4f;
+    --white: #fff;
+    --black: #000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: #8fc3f7;
+    height: 60px;
+    
+    .nav-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+
+        .menu {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin: 30px;
+
+                a {
+                    text-decoration: none;
+                    color: var(--white);
+                }
+
+                .menu1 {
+                    background-color: var(--black);
+                    color: var(--white);
+                    text-decoration: none;
+                    width: 100px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 0.5s;
+                    border: 1px solid var(--black);
+                    border-radius: 25px;
+                    
+                    &:hover {
+                        background-color: #ffffff;
+                        color: var(--black);
+                        border: 2px solid var(--black);
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .banner-wrapper {
+            flex-direction: column;
+            padding: 20px;
+        }
+    }
+}
+
+.banner {
+    padding: 60px 0;
+
+    .banner-wrapper {
+        display: flex;
+        align-content: center;
+    }
+
+    .banner-info {
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        p {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+    }
+    .banner-img {
+        padding: 0 150px;
+    }
+
+    img {
+        border-radius: 500px;
+    }
+
+    @media only screen and (max-width: 480px) {
+        .banner-wrapper {
+            flex-direction: column;
+            padding: 20px;
+
+        .banner-info {
+                h1 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 17px;
+                }
+
+                .banner-img {
+                    display: contents;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
